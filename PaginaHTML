@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Notícias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            display: block;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+        }
+        .news-item h2 {
+            margin: 0;
+            color: #333;
+        }
+        .news-item p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notícias Recentes</h1>
+    </header>
+    <div class="container">
+        <div class="carousel">
+            <img src="image1.jpg" alt="Notícia 1" id="carousel-image">
+            <div class="carousel-controls">
+                <button onclick="prevImage()">&#10094;</button>
+                <button onclick="nextImage()">&#10095;</button>
+            </div>
+        </div>
+        <div class="news-item">
+            <h2>Notícia 1</h2>
+            <p>Detalhes da primeira notícia. Adicione aqui as informações e atualizações relevantes.</p>
+        </div>
+        <div class="news-item">
+            <h2>Notícia 2</h2>
+            <p>Detalhes da segunda notícia. Continue com informações interessantes e atualizadas.</p>
+        </div>
+        <div class="news-item">
+            <h2>Notícia 3</h2>
+            <p>Mais detalhes sobre outra notícia. Mantenha seu conteúdo atualizado e relevante.</p>
+        </div>
+    </div>
+    <script>
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg"]; // Adicione seus próprios caminhos para as imagens
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const imageElement = document.getElementById('carousel-image');
+            imageElement.src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+        }
+
+        // Inicializa com a primeira imagem
+        showImage(currentIndex);
+    </script>
+</body>
+</html>

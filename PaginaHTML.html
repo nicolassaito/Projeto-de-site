@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="estilo.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Notícias</title>
+    
+
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+              
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Você não é Ruim só e menos melhor</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+          </div>
+        <div class="container">
+        
+            <header>
+        <h1>NOTÍCIAS MUNDI</h1>
+        
+    </header>
+
+   
+        <h2>Data e Hora Atual</h2>
+        <p id="datetime">Carregando...</p>
+    </div>
+    
+    <script src="script.js"></script>
+</header>
+
+<div class="container">
+        <div class="carousel">
+            <!-- Imagens locais -->
+            <img src="imagens/imagem1.jpg" alt="Notícia 1" id="carousel-image">
+            <div class="carousel-controls">
+                <button onclick="prevImage()">&#10094;</button>
+                <button onclick="nextImage()">&#10095;</button>
+            </div>
+        </div>
+        <div class="news-item">
+            
+        </div>
+        <div class="news-item">
+            <img src="saopaulo.jfif" alt="São Paulo maior time do Brasil">
+          <br>
+            <h4>São Paulo 2 x 1 Vitória: assista aos gols e aos melhores momentos <br><br><br> <iframe width="360" height="215" src="https://www.youtube.com/embed/XvKLelRMGLY?si=60uGN2--tQ3v52Ko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+           <br>
+           <img src="monumental.jpg">
+        <h4>Final de Libertadores vai ser na argentina no estádio Monumental de Núñez<h3s>veja abaixo a localização</h3><br><br> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.327857332824!2d-58.449757700000006!3d-34.54525340000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb43ae6018ddf%3A0x3d7f60a75bfa308a!2zRXN0w6FkaW8gTW9udW1lbnRhbCBkZSBOw7rDsWV6!5e0!3m2!1spt-BR!2sbr!4v1724674638471!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></h4>
+        <br><br><br><br>
+        <img src="nego di.png">
+        <h4>Justiça condena Nego Di por difamação e injúria contra deputada; influenciador está preso por suspeita de estelionato<a href="https://g1.globo.com/rs/rio-grande-do-sul/noticia/2024/08/25/justica-condena-nego-di-por-difamacao-e-injuria-contra-deputada-influenciador-esta-preso-por-suspeita-de-estelionato.ghtml" > Clique aqui para saber mais</a></h4> 
+        </div>
+        <div class="news-item">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h4>Apresentação do Site</h4>
+        <audio controls>
+            <source src="ElevenLabs_2024-08-26T14_05_32_Adam_pre_s50_sb80_se0_b_m2.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento <code>audio</code>.
+        </audio>
+    </div>
+    <button onclick="alert('Você clicou no botão!')">Clique Aqui</button>
+    <script>
+        
+        // Lista de imagens locais para o carrossel
+        const images = [
+            "combe 3.png",
+            "silvio 2.jpg",
+            "aviao1.png",
+            "apontar1.jpg"
+        ];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const imageElement = document.getElementById('carousel-image');
+            imageElement.src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+        }
+
+        // Inicializa com a primeira imagem
+        showImage(currentIndex);
+    </script>
+</body>
+</html>
